@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mai Nguyen • Developer & Researcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Karla:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading">
+        <div class="loading-text">✨ MAI ✨</div>
+    </div>
+
+    <!-- Background Decorations -->
+    <div class="bg-decoration">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <h1>Mai Nguyen</h1>
+                    <p class="tagline">Developer • Researcher • Math Enthusiast</p>
+                </div>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="container">
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Building elegant solutions to complex problems</h2>
+                <p>CS & Math student at Colby College. Pulver Science Scholar. Passionate about machine learning, full-stack development, and algorithmic optimization.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="Nguyen_Mai_Resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-visual-text">💻<br>🎨<br>🧮</div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-med); margin-bottom: 2rem;">
+                I'm a Vietnamese student studying Computer Science and Mathematics at Colby College. I have a confession: I optimize everything. From walking routes between classes to RNA-Seq quantification algorithms, I'm constantly seeking the most elegant solution. My work spans machine learning research, full-stack development, and competitive mathematics.
+            </p>
+            <div class="about-grid">
+                <div class="stat-card">
+                    <span class="stat-number">4.02</span>
+                    <span class="stat-label">GPA</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">2nd</span>
+                    <span class="stat-label">Prize in Vietnam National Math Competition 2024</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">81%</span>
+                    <span class="stat-label">Success Rate vs RSEM Software</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🍳</div>
+                        <h3 class="project-title">gastronome</h3>
+                        <p class="project-tech">Full-Stack • AI-Powered</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Digital recipe book application with AI-powered recipe extraction from YouTube and TikTok videos. Built with microservices architecture and deployed on Render.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">OpenAI GPT-4</span>
+                            <span class="tag">AWS S3</span>
+                        </div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🧬</div>
+                        <h3 class="project-title">RNA-Seq Quantification</h3>
+                        <p class="project-tech">Research • Bioinformatics</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Built optimization model using Bayesian networks and EM algorithms to determine mRNA molecule proportions. Achieved 81% success rate compared to RSEM.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Bayesian Networks</span>
+                            <span class="tag">Optimization</span>
+                            <span class="tag">Bioinformatics</span>
+                        </div>
+                        <a href="#" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🤖</div>
+                        <h3 class="project-title">ML Human Feature Integration</h3>
+                        <p class="project-tech">Research • Machine Learning</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Designing entropy-based feature selection algorithms for adaptive querying strategies that improve model performance while minimizing user burden.</p>
+                        <div class="project-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">NumPy</span>
+                            <span class="tag">scikit-learn</span>
+                            <span class="tag">Algorithm Design</span>
+                        </div>
+                        <a href="#" class="project-link">Explore →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">C++</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">C</span>
+                        <span class="skill-item">OCaml</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">React</span>
+                        <span class="skill-item">HTML/CSS</span>
+                        <span class="skill-item">Responsive Design</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Express.js</span>
+                        <span class="skill-item">Flask</span>
+                        <span class="skill-item">REST APIs</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>ML & Data</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">scikit-learn</span>
+                        <span class="skill-item">NumPy</span>
+                        <span class="skill-item">pandas</span>
+                        <span class="skill-item">Matplotlib</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">MongoDB</span>
+                        <span class="skill-item">Firebase</span>
+                        <span class="skill-item">NoSQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Git/GitHub</span>
+                        <span class="skill-item">AWS S3</span>
+                        <span class="skill-item">Postman</span>
+                        <span class="skill-item">Render</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Let's Connect!</h2>
+            <p>I'm always open to interesting conversations and opportunities.</p>
+            <div class="contact-links">
+                <a href="mailto:chimainguyenthi0801@gmail.com" class="contact-btn email">Email Me</a>
+                <a href="https://github.com/yourusername" class="contact-btn github">GitHub</a>
+                <a href="https://linkedin.com/in/yourusername" class="contact-btn linkedin">LinkedIn</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Mai Nguyen • Built with ❤️ and lots of ☕</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
