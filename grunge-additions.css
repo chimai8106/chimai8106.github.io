@@ -1,0 +1,264 @@
+/* ===============================================
+   Y2K GRUNGE ADDITIONS - ADD TO YOUR STYLE.CSS
+   ===============================================
+   
+   These styles add intense Y2K grunge aesthetic.
+   Add this to the END of your existing style.css file,
+   or replace the matching selectors.
+*/
+
+/* INTENSE DENIM TEXTURE BACKGROUND */
+body::before {
+    background: linear-gradient(180deg, #5B8FB9 0%, #2C5F7F 50%, #1A3A52 100%);
+}
+
+body::after {
+    background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px),
+        repeating-linear-gradient(-45deg, transparent, transparent 2px, rgba(0, 0, 0, 0.05) 2px, rgba(0, 0, 0, 0.05) 4px),
+        repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(58, 90, 128, 0.08) 1px, rgba(58, 90, 128, 0.08) 2px),
+        repeating-linear-gradient(90deg, transparent, transparent 1px, rgba(58, 90, 128, 0.08) 1px, rgba(58, 90, 128, 0.08) 2px);
+    opacity: 0.8;
+}
+
+/* REMOVE ALL ROUNDED CORNERS - Make everything rectangular */
+* {
+    border-radius: 0 !important;
+}
+
+/* HEADER - Glassmorphism & Animated Border */
+header {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-bottom: 4px solid var(--cyber-blue);
+    box-shadow: 0 0 30px rgba(0, 217, 255, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--cyber-blue), var(--electric-pink), var(--lime), var(--cyber-blue));
+    background-size: 200% 100%;
+    animation: slideGradient 4s linear infinite;
+}
+
+/* NAV BUTTONS - Asymmetric with Chrome Effect */
+nav a {
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+    box-shadow: 5px 5px 0 var(--text-dark), inset -2px -2px 4px rgba(0, 0, 0, 0.2), inset 2px 2px 4px rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+}
+
+/* HERO TEXT - Glitch Effect */
+.hero-text h2 {
+    color: var(--text-light);
+    text-shadow: 3px 3px 0 var(--cyber-blue), -1px -1px 0 var(--electric-pink);
+}
+
+.hero-text p {
+    color: var(--ice-blue);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* HERO VISUAL - Scanlines & Glitch */
+.hero-visual {
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+    border: 6px solid var(--text-dark);
+    box-shadow: 12px 12px 0 var(--text-dark), 0 0 60px rgba(0, 217, 255, 0.5);
+    animation: glitchRotate 20s linear infinite;
+}
+
+.hero-visual::before {
+    background: 
+        repeating-linear-gradient(0deg, transparent, transparent 4px, rgba(0, 217, 255, 0.1) 4px, rgba(0, 217, 255, 0.1) 8px),
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.5) 0%, transparent 50%);
+    animation: scanlines 8s linear infinite;
+}
+
+@keyframes scanlines {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(20px); }
+}
+
+@keyframes glitchRotate {
+    0%, 100% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(20deg); }
+}
+
+.hero-visual-text {
+    animation: glitch 3s infinite;
+}
+
+@keyframes glitch {
+    0%, 90%, 100% { transform: translate(0); }
+    92% { transform: translate(-2px, 2px); }
+    94% { transform: translate(2px, -2px); }
+}
+
+/* BUTTONS - Diagonal Cuts */
+.btn {
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    letter-spacing: 0.1em;
+}
+
+.btn-primary {
+    border: 4px solid var(--text-dark);
+    box-shadow: 6px 6px 0 var(--text-dark), 0 0 30px rgba(255, 16, 240, 0.6);
+}
+
+/* CARDS - Denim Pocket Style with Stitching */
+.about, .skills, .coursework, .research-feature, .research-past {
+    clip-path: polygon(3% 0%, 100% 0%, 97% 100%, 0% 100%);
+    border: 5px solid var(--text-dark);
+    box-shadow: 15px 15px 0 var(--text-dark);
+}
+
+/* Stitching effect */
+.about::before, .skills::before, .coursework::before,
+.research-feature::before, .research-past::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 2px dashed rgba(58, 90, 128, 0.3);
+    pointer-events: none;
+}
+
+/* Corner rivets */
+.about::after, .skills::after, .coursework::after,
+.research-feature::after, .research-past::after {
+    content: '⚫';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 12px;
+    color: var(--chrome);
+    text-shadow: 20px 0 0 var(--chrome), 0 20px 0 var(--chrome), 20px 20px 0 var(--chrome);
+}
+
+/* STAT CARDS - Asymmetric */
+.stat-card {
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+    border: 4px solid var(--text-dark);
+    box-shadow: 8px 8px 0 var(--text-dark);
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border: 1px dashed rgba(58, 90, 128, 0.4);
+}
+
+/* PROJECT CARDS - Diagonal Cuts */
+.project-card {
+    clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
+    border: 5px solid var(--text-dark);
+    box-shadow: 10px 10px 0 var(--text-dark);
+}
+
+.project-card::before {
+    height: 6px;
+    background: linear-gradient(90deg, var(--cyber-blue), var(--electric-pink), var(--lime));
+    background-size: 200% 100%;
+    animation: slideGradient 3s linear infinite;
+}
+
+.project-icon {
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    border: 4px solid var(--text-dark);
+    box-shadow: 6px 6px 0 var(--text-dark);
+}
+
+/* TAGS - Bold & Rectangular */
+.tag, .skill-item {
+    border: 3px solid var(--text-dark);
+    box-shadow: 3px 3px 0 var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+}
+
+.tag:hover, .skill-item:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 var(--text-dark);
+}
+
+/* LINKS - Diagonal */
+.project-link, .poster-link {
+    clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+    border: 4px solid var(--text-dark);
+    box-shadow: 6px 6px 0 var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* CONTACT BUTTONS - Asymmetric */
+.contact-btn {
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    border: 5px solid var(--text-dark);
+    box-shadow: 8px 8px 0 var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* COURSE ITEMS - Bold Borders */
+.course-list li {
+    border: 3px solid var(--text-dark);
+    box-shadow: 4px 4px 0 var(--text-dark);
+}
+
+/* RESEARCH BADGE - Diagonal */
+.research-badge {
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+    box-shadow: 5px 5px 0 var(--text-dark);
+}
+
+/* POSTER SECTION - Asymmetric */
+.research-poster {
+    clip-path: polygon(3% 0%, 100% 0%, 97% 100%, 0% 100%);
+    border: 4px solid var(--text-dark);
+    box-shadow: 8px 8px 0 var(--text-dark);
+}
+
+/* PAST RESEARCH CARD */
+.past-research-card {
+    border: 3px solid var(--text-dark);
+    box-shadow: 6px 6px 0 var(--text-dark);
+}
+
+/* FOOTER - Animated Border */
+footer {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    color: var(--ice-blue);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+footer::before {
+    height: 4px;
+    background: linear-gradient(90deg, var(--cyber-blue), var(--electric-pink), var(--lime), var(--cyber-blue));
+    background-size: 200% 100%;
+    animation: slideGradient 4s linear infinite;
+}
+
+/* UPPERCASE EVERYTHING */
+.tagline, .project-tech, .research-affiliation {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+h2, h3, .stat-label {
+    text-transform: uppercase;
+}
+
+/* ANIMATION FOR GRADIENT SLIDE */
+@keyframes slideGradient {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 0%; }
+}

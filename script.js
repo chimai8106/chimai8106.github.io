@@ -332,12 +332,3 @@ function activatePartyMode() {
         setTimeout(() => message.remove(), 500);
     }, 3000);
 }
-
-// ===================================
-// LOG WELCOME MESSAGE
-// ===================================
-
-console.log('%c👋 Hey there!', 'font-size: 24px; font-weight: bold; color: #FF6B9D;');
-console.log('%cLooks like you\'re checking out the code! Nice!', 'font-size: 14px; color: #C65BCF;');
-console.log('%cTry the Konami Code for a surprise 😉', 'font-size: 12px; color: #69B4F7;');
-console.log('%c↑ ↑ ↓ ↓ ← → ← → B A', 'font-size: 14px; font-weight: bold; color: #FFB347;');

@@ -8,11 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Karla:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="grunge-additions.css">
 </head>
 <body>
     <!-- Loading Screen -->
     <div class="loading">
-        <div class="loading-text">✨ MAI ✨</div>
+        <div class="loading-text">✨ Mai's Portfolio ✨</div>
     </div>
 
     <!-- Background Decorations -->
@@ -32,8 +33,10 @@
                 </div>
                 <nav>
                     <a href="#about">About</a>
+                    <a href="#research">Research</a>
                     <a href="#projects">Projects</a>
                     <a href="#skills">Skills</a>
+                    <a href="#coursework">Coursework</a>
                     <a href="#contact">Contact</a>
                 </nav>
             </div>
@@ -44,36 +47,121 @@
     <div class="container">
         <section class="hero">
             <div class="hero-text">
-                <h2>Building elegant solutions to complex problems</h2>
-                <p>CS & Math student at Colby College. Pulver Science Scholar. Passionate about machine learning, full-stack development, and algorithmic optimization.</p>
+                <h2>Where mathematics meets code</h2>
+                <p>CS & Math student at Colby College. Pulver Science Scholar. Building elegant algorithms, ML models, and full-stack applications at the intersection of theory and practice.</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="Nguyen_Mai_Resume.pdf" class="btn btn-secondary" download>Download Resume</a>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="hero-visual-text">💻<br>🎨<br>🧮</div>
-            </div>
+            
         </section>
 
         <!-- About Section -->
         <section id="about" class="about">
             <h2>About Me</h2>
             <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-med); margin-bottom: 2rem;">
-                I'm a Vietnamese student studying Computer Science and Mathematics at Colby College. I have a confession: I optimize everything. From walking routes between classes to RNA-Seq quantification algorithms, I'm constantly seeking the most elegant solution. My work spans machine learning research, full-stack development, and competitive mathematics.
+                I'm a Vietnamese student studying Computer Science and Mathematics at Colby College, where I'm a Pulver Science Scholar. I grew up in Nghe An Province and went to Phan Boi Chau High School for the Gifted before coming to the US for college.
+            </p>    
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-med); margin-bottom: 2rem;">
+            I love building things, whether it's full-stack applications, machine learning models, or legos. Currently, I'm researching ML and human feature integration, and I recently built gastronome, an AI-powered recipe app that extracts recipes from videos. I competed in math olympiads back in Vietnam and still get excited when I find an elegant proof or efficient algorithm.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-med); margin-bottom: 2rem;">
+            Outside of academic, I founded the Colby Baking Club and used to run an online bakery back in Vietnam. There's something satisfying about the precision required in both coding and baking: measure twice, debug once.
+            When I'm not at my computer or in the kitchen, you'll find me outdoors. I'm a Trip Leader for Colby Outing Club and Colby Outdoor Orientation, leading hiking trips. I also love swimming. Swimming and being on the water help me think through problems differently than staring at code ever could.
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-med); margin-bottom: 2rem;">
+                I'm still figuring out how all these pieces fit together but I'm excited to see where the intersection of technology, creativity, and community takes me.
             </p>
             <div class="about-grid">
                 <div class="stat-card">
+                    <span class="stat-number">MERN</span>
+                    <span class="stat-label">Full-Stack Developer (React, Node.js, MongoDB, AWS)</span>
+                </div>
+                <div class="stat-card">
                     <span class="stat-number">4.02</span>
-                    <span class="stat-label">GPA</span>
+                    <span class="stat-label">GPA - Pulver Science Scholar</span>
                 </div>
                 <div class="stat-card">
                     <span class="stat-number">2nd</span>
-                    <span class="stat-label">Prize in Vietnam National Math Competition 2024</span>
+                    <span class="stat-label">Vietnam National Math Competition 2024</span>
                 </div>
-                <div class="stat-card">
-                    <span class="stat-number">81%</span>
-                    <span class="stat-label">Success Rate vs RSEM Software</span>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="research">
+            <h2>Research</h2>
+            
+            <div class="research-feature">
+                <div class="research-header">
+                    <div class="research-badge">Current</div>
+                    <h3>Machine Learning & Human Feature Integration</h3>
+                    <p class="research-affiliation">Department of Computer Science, Colby College • Feb 2025 - Present</p>
+                </div>
+                
+                <div class="research-content">
+                    <p class="research-abstract">
+                        <strong>Research Question:</strong> How do we optimally train machine learning models when only a subset of features is available at train time, especially when incorporating user-provided "human features" that are expensive to collect?
+                    </p>
+                    
+                    <p>
+                        I'm investigating adaptive querying strategies that determine which features to request from users at test time to maximize model accuracy while minimizing user burden. My work focuses on training strategies under feature scarcity—comparing random selection, uncertainty-based approaches, and intelligent heuristic methods.
+                    </p>
+
+                    <div class="contributions-section">
+                        <h4> Key Contributions</h4>
+                        <div class="contribution-grid">
+                            <div class="contribution-card">
+                                <div class="contribution-icon">🔧</div>
+                                <div class="contribution-content">
+                                    <h5>Adaptive Querying Framework</h5>
+                                    <p>Developed <span class="highlight">information-theoretic feature selection algorithms</span> leveraging entropy-based metrics to dynamically determine optimal feature queries, achieving comparable accuracy to full-feature models while reducing user burden by up to 60%</p>
+                                </div>
+                            </div>
+                            <div class="contribution-card">
+                                <div class="contribution-icon">🔧</div>
+                                <div class="contribution-content">
+                                    <h5>Systematic Strategy Analysis</h5>
+                                    <p>Designed and implemented <span class="highlight">6 masking strategies</span> (exact random, probabilistic, uncertainty-based, heuristic) with controlled experimental conditions, conducting comprehensive train-test alignment analysis across semi-realistic datasets to identify optimal deployment configurations</p>
+                                </div>
+                            </div>
+                            <div class="contribution-card">
+                                <div class="contribution-icon">🔧</div>
+                                <div class="contribution-content">
+                                    <h5>End-to-End Evaluation Pipeline</h5>
+                                    <p>Architected <span class="highlight">scalable experimental infrastructure</span> in Python integrating predictive modeling (scikit-learn), statistical analysis (NumPy/pandas), and visualization tools to evaluate performance across varying feature availability scenarios with rigorous cross-validation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="research-poster">
+                        <div class="poster-placeholder">
+                            <span class="poster-icon">📊</span>
+                            <p>Summer Research Poster</p>
+                            <a href="Nguyen_M_28.pdf" class="poster-link" target="_blank" rel="noopener noreferrer">
+                            View Full Poster →
+                            </a>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="research-past">
+                <h3>Past Research</h3>
+                <div class="past-research-card">
+                    <h4>Bulk RNA-Seq Quantification</h4>
+                    <p class="research-affiliation">Projects in Mathematics & Applications, Ho Chi Minh City • June - Aug 2023</p>
+                    <p>
+                        Built optimization models using Bayesian networks and expectation-maximization algorithms to determine mRNA molecule proportions from transcriptome data. Achieved 81% success rate compared to industry-standard RSEM software through 30 experimental trials.
+                    </p>
+                    <div class="research-tags">
+                        <span class="tag">Bayesian Networks</span>
+                        <span class="tag">EM Algorithm</span>
+                        <span class="tag">Bioinformatics</span>
+                        <span class="tag">Optimization</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -90,7 +178,7 @@
                         <p class="project-tech">Full-Stack • AI-Powered</p>
                     </div>
                     <div class="project-body">
-                        <p>Digital recipe book application with AI-powered recipe extraction from YouTube and TikTok videos. Built with microservices architecture and deployed on Render.</p>
+                        <p>Digital recipe book ecosystem with AI-powered recipe extraction from articles, YouTube and TikTok videos and recipe generation from given ingredients. Built with microservices architecture and deployed on Render.</p>
                         <div class="project-tags">
                             <span class="tag">React</span>
                             <span class="tag">Node.js</span>
@@ -98,7 +186,7 @@
                             <span class="tag">OpenAI GPT-4</span>
                             <span class="tag">AWS S3</span>
                         </div>
-                        <a href="#" class="project-link">View Project →</a>
+                        <a href="https://gastronome-official.onrender.com" class="project-link">View Project →</a>
                     </div>
                 </div>
 
@@ -117,7 +205,7 @@
                             <span class="tag">Optimization</span>
                             <span class="tag">Bioinformatics</span>
                         </div>
-                        <a href="#" class="project-link">Learn More →</a>
+                        <!--<a href="#" class="project-link">Learn More →</a> -->
                     </div>
                 </div>
 
@@ -136,7 +224,7 @@
                             <span class="tag">scikit-learn</span>
                             <span class="tag">Algorithm Design</span>
                         </div>
-                        <a href="#" class="project-link">Explore →</a>
+                        <!--<a href="#" class="project-link">Explore →</a>-->
                     </div>
                 </div>
             </div>
@@ -144,7 +232,7 @@
 
         <!-- Skills Section -->
         <section id="skills" class="skills">
-            <h2>Technical Skills</h2>
+            <h2>Technical Stack</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Languages</h3>
@@ -158,47 +246,108 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Frontend</h3>
+                    <h3>Frontend & UI</h3>
                     <div class="skill-list">
                         <span class="skill-item">React</span>
                         <span class="skill-item">HTML/CSS</span>
                         <span class="skill-item">Responsive Design</span>
+                        <span class="skill-item">UI/UX</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Backend</h3>
+                    <h3>Backend & APIs</h3>
                     <div class="skill-list">
                         <span class="skill-item">Node.js</span>
                         <span class="skill-item">Express.js</span>
                         <span class="skill-item">Flask</span>
                         <span class="skill-item">REST APIs</span>
+                        <span class="skill-item">Microservices</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>ML & Data</h3>
+                    <h3>ML & Data Science</h3>
                     <div class="skill-list">
                         <span class="skill-item">scikit-learn</span>
                         <span class="skill-item">NumPy</span>
                         <span class="skill-item">pandas</span>
                         <span class="skill-item">Matplotlib</span>
+                        <span class="skill-item">Atomic Agents</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Databases</h3>
+                    <h3>Databases & Cloud</h3>
                     <div class="skill-list">
                         <span class="skill-item">MongoDB</span>
                         <span class="skill-item">Firebase</span>
+                        <span class="skill-item">AWS S3</span>
                         <span class="skill-item">NoSQL</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Tools</h3>
+                    <h3>DevOps & Tools</h3>
                     <div class="skill-list">
                         <span class="skill-item">Git/GitHub</span>
-                        <span class="skill-item">AWS S3</span>
                         <span class="skill-item">Postman</span>
                         <span class="skill-item">Render</span>
+                        <span class="skill-item">CI/CD</span>
+                        <span class="skill-item">JWT</span>
+                        <span class="skill-item">CORS</span>
                     </div>
+                </div>
+                <div class="skill-category">
+                    <h3>AI & Integration</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">OpenAI GPT-4</span>
+                        <span class="skill-item">Web Scraping</span>
+                        <span class="skill-item">Video Processing</span>
+                        <span class="skill-item">Rate Limiting</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Specialized</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Bayesian Networks</span>
+                        <span class="skill-item">Algorithm Design</span>
+                        <span class="skill-item">Graph Theory</span>
+                        <span class="skill-item">Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coursework Section -->
+        <section id="coursework" class="coursework">
+            <h2>Relevant Coursework</h2>
+            <div class="coursework-grid">
+                <div class="course-category">
+                    <h3>Computer Science</h3>
+                    <ul class="course-list">
+                        <li>CS 378 - Theory of Computation</li>
+                        <li>CS 333 - Programming Languages</li>
+                        <li>CS 252 - Mathematical Data Analysis & Visualization</li>
+                        <li>CS 231 - Data Structures & Algorithms</li>
+                        <li>CS 152 - Computational Thinking: Science</li>
+                    </ul>
+                </div>
+                <div class="course-category">
+                    <h3>Mathematics</h3>
+                    <ul class="course-list">
+                        <li>MA 434 - Topics in Abstract Algebra - Galois Theory</li>
+                        <li>MA 357 - Elementary Number Theory</li>
+                        <li>MA 333 - Abstract Algebra</li>
+                        <li>MA 253 - Linear Algebra</li>
+                        <li>MA 165 - Honors Calculus II</li>
+                        <li>MA 135 - Honors Calculus I</li>
+                    </ul>
+                </div>
+                <div class="course-category">
+                    <h3>Interdisciplinary</h3>
+                    <ul class="course-list">
+                        <li>BI 100 - Navigating STEM Research</li>
+                        <li>BI 118 - Sustainable Agriculture & Food Systems</li>
+                        <li>EC 133 - Principles of Microeconomics</li>
+                        <li>CL 157 - Monsters in Greco-Roman Myth</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -209,12 +358,12 @@
             <p>I'm always open to interesting conversations and opportunities.</p>
             <div class="contact-links">
                 <a href="mailto:chimainguyenthi0801@gmail.com" class="contact-btn email">Email Me</a>
-                <a href="https://github.com/yourusername" class="contact-btn github">GitHub</a>
-                <a href="https://linkedin.com/in/yourusername" class="contact-btn linkedin">LinkedIn</a>
+                <a href="https://github.com/chimai8106" class="contact-btn github">GitHub</a>
+                <a href="https://www.linkedin.com/in/mai-nguyen-674432218/" class="contact-btn linkedin">LinkedIn</a>
             </div>
         </section>
     </div>
-
+ 
     <!-- Footer -->
     <footer>
         <div class="container">
