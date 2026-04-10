@@ -10,11 +10,39 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="grunge-additions.css">
     <style>
-        /* 4th project card icon color */
+        /* ── Hero REU badge ── */
+        .hero-reu-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--lime), var(--cyber-blue));
+            color: var(--text-dark);
+            border: 2px solid var(--text-dark);
+            border-radius: 0;
+            padding: 0.45rem 1.1rem;
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            box-shadow: 3px 3px 0 var(--text-dark);
+            margin-bottom: 1rem;
+            clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
+        }
+        .hero-reu-badge .badge-dot {
+            width: 8px; height: 8px;
+            background: var(--text-dark);
+            border-radius: 50%;
+            animation: pulse 1.8s ease-in-out infinite;
+        }
+        /* ── 4th + 5th project card icon colors ── */
         .project-card:nth-child(4) .project-icon {
+            background: linear-gradient(135deg, var(--lime), var(--cyber-blue));
+        }
+        .project-card:nth-child(5) .project-icon {
             background: linear-gradient(135deg, var(--lavender), var(--electric-pink));
         }
-        /* Postcard card accent */
+        /* ── Postcard card accent ── */
         .project-card.postcard-card {
             background: linear-gradient(160deg, #fff9f0 0%, #fff 60%);
             border-color: var(--electric-pink);
@@ -28,6 +56,71 @@
         }
         .project-card.postcard-card:hover {
             box-shadow: 13px 13px 0 var(--electric-pink), 0 0 40px rgba(255, 16, 240, 0.25);
+        }
+        /* ── Compact poster line in research header ── */
+        .poster-inline {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-top: 0.4rem;
+        }
+        .poster-inline a {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 0.82rem;
+            padding: 0.35rem 1rem;
+            background: linear-gradient(135deg, var(--gold), var(--platinum));
+            border: 2px solid var(--text-dark);
+            box-shadow: 3px 3px 0 var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.25s ease;
+        }
+        .poster-inline a:hover {
+            transform: translate(-2px,-2px);
+            box-shadow: 5px 5px 0 var(--text-dark);
+            background: linear-gradient(135deg, var(--cyber-blue), var(--electric-pink));
+            color: white;
+        }
+        /* ── Faculty link ── */
+        .faculty-link {
+            color: var(--cyber-blue);
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 2px solid var(--cyber-blue);
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
+        .faculty-link:hover {
+            color: var(--electric-pink);
+            border-color: var(--electric-pink);
+        }
+        /* ── Past research report link ── */
+        .report-link {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 0.82rem;
+            padding: 0.4rem 1.1rem;
+            background: linear-gradient(135deg, var(--denim-light), var(--ice-blue));
+            border: 2px solid var(--text-dark);
+            box-shadow: 3px 3px 0 var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 1rem;
+            transition: all 0.25s ease;
+        }
+        .report-link:hover {
+            transform: translate(-2px,-2px);
+            box-shadow: 5px 5px 0 var(--text-dark);
+            background: linear-gradient(135deg, var(--cyber-blue), var(--electric-pink));
+            color: white;
+        }
+        /* ── REU section: slim card ── */
+        .reu-slim .research-content {
+            margin-top: 0;
         }
     </style>
 </head>
@@ -68,6 +161,11 @@
     <div class="container">
         <section class="hero">
             <div class="hero-text">
+                <!-- REU highlight badge -->
+                <div class="hero-reu-badge">
+                    <span class="badge-dot"></span>
+                    Incoming REU Researcher · WashU CSE · Summer 2025
+                </div>
                 <h2>Where mathematics meets code</h2>
                 <p>CS & Math student at Colby College. Pulver Science Scholar. Building elegant algorithms, ML models, and full-stack applications at the intersection of theory and practice.</p>
                 <div class="cta-buttons">
@@ -114,7 +212,7 @@
             <h2>Featured Projects</h2>
             <div class="project-grid">
 
-                <!-- Postcard I Never Send — NEWEST, accented card -->
+                <!-- Postcard I Never Send — NEWEST -->
                 <div class="project-card postcard-card">
                     <div class="project-header">
                         <div class="project-icon">✉️</div>
@@ -130,7 +228,7 @@
                             <span class="tag">ElevenLabs</span>
                             <span class="tag">Web Audio API</span>
                         </div>
-                        <!-- <a href="#" class="project-link">View Project →</a> -->
+                        <a href="https://travel-book-s5sk.onrender.com" class="project-link" target="_blank" rel="noopener noreferrer">View Project →</a>
                     </div>
                 </div>
 
@@ -150,7 +248,26 @@
                             <span class="tag">OpenAI GPT-4</span>
                             <span class="tag">AWS S3</span>
                         </div>
-                        <a href="https://gastronome-official.onrender.com" class="project-link">View Project →</a>
+                        <a href="https://gastronome-official.onrender.com" class="project-link" target="_blank" rel="noopener noreferrer">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Blackjack Monte Carlo -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🃏</div>
+                        <h3 class="project-title">The House Always Wins (We Checked)</h3>
+                        <p class="project-tech">Simulation • Statistics</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Monte Carlo Blackjack simulation in Java across 10,000 games, revealing players win ~41% vs. the dealer's ~50%. Includes an interactive terminal game and Martingale strategy analysis.</p>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Monte Carlo</span>
+                            <span class="tag">Statistics</span>
+                            <span class="tag">Simulation</span>
+                        </div>
+                        <!-- <a href="#" class="project-link">View Project →</a> -->
                     </div>
                 </div>
 
@@ -197,58 +314,39 @@
         <section id="research" class="research">
             <h2>Research</h2>
 
-            <!-- INCOMING REU -->
-            <div class="research-feature" style="margin-bottom: 2.5rem;">
+            <!-- INCOMING REU — slim card -->
+            <div class="research-feature reu-slim" style="margin-bottom: 2.5rem;">
                 <div class="research-header">
                     <div class="research-badge" style="background: linear-gradient(135deg, var(--lime), var(--cyber-blue)); color: var(--text-dark);">Incoming • Summer 2025</div>
                     <h3>Guiding Exploration in Benign Environments</h3>
-                    <p class="research-affiliation">CSE REU — Washington University in St. Louis &nbsp;•&nbsp; Faculty: <strong>Prof. Brendan Juba</strong></p>
+                    <p class="research-affiliation">
+                        CSE REU — Washington University in St. Louis &nbsp;•&nbsp;
+                        Faculty: <a href="https://www.cse.wustl.edu/~bjuba/" class="faculty-link" target="_blank" rel="noopener noreferrer">Prof. Brendan Juba</a>
+                    </p>
                 </div>
-
                 <div class="research-content">
                     <p class="research-abstract">
-                        <strong>Research Question:</strong> How can an agent efficiently learn a useful model of its environment by trial-and-error, even in settings where key features are inherently hard to discover — such as combination locks, where no efficient strategy guarantees finding the solution?
+                        <strong>Research Question:</strong> How can an agent efficiently learn a useful model of its environment by trial-and-error, even in settings where key features are inherently hard to discover — such as combination locks, where no efficient strategy guarantees finding the solution? We aim to design algorithms that can solve nontrivial families of such exploration problems, bridging classical AI planning with modern learning theory.
                     </p>
-
-                    <p>
-                        This project investigates the computational aspects of environment exploration. Recent works have introduced information-theoretic quantities that capture when it is <em>possible in principle</em> to learn an adequate environment model in a small number of moves. The goal is to design algorithms that can solve nontrivial families of such exploration problems, bridging classical AI planning with modern learning theory.
-                    </p>
-
-                    <div class="contributions-section">
-                        <h4>Project Focus Areas</h4>
-                        <div class="contribution-grid">
-                            <div class="contribution-card">
-                                <div class="contribution-icon">🔍</div>
-                                <div class="contribution-content">
-                                    <h5>Exploration Hardness</h5>
-                                    <p>Studying <span class="highlight">information-theoretic measures</span> that characterize when environments are learnable in a bounded number of interactions — including adversarial cases like combination locks.</p>
-                                </div>
-                            </div>
-                            <div class="contribution-card">
-                                <div class="contribution-icon">🧭</div>
-                                <div class="contribution-content">
-                                    <h5>Algorithm Design</h5>
-                                    <p>Developing <span class="highlight">efficient algorithms for classical AI planning</span> that exploit benign environment structure to guide exploration and reliably discover key features with minimal trial-and-error.</p>
-                                </div>
-                            </div>
-                            <div class="contribution-card">
-                                <div class="contribution-icon">📐</div>
-                                <div class="contribution-content">
-                                    <h5>Theory & Probability</h5>
-                                    <p>Applying <span class="highlight">probabilistic reasoning and algorithm analysis</span> to formally characterize tractable families of exploration problems, drawing on ML theory and classical planning foundations.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
             <!-- CURRENT ML RESEARCH -->
             <div class="research-feature">
-                <div class="research-header">
-                    <div class="research-badge">Current</div>
-                    <h3>Machine Learning & Human Feature Integration</h3>
-                    <p class="research-affiliation">Department of Computer Science, Colby College • Feb 2025 - Present</p>
+                <div class="research-header" style="display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; gap:1rem;">
+                    <div style="flex:1; min-width:0;">
+                        <div class="research-badge">Current</div>
+                        <h3>Machine Learning & Human Feature Integration</h3>
+                        <p class="research-affiliation">
+                            Department of Computer Science, Colby College &nbsp;•&nbsp; Feb 2025 – Present<br>
+                            Faculty: <a href="https://isaaclage.github.io/" class="faculty-link" target="_blank" rel="noopener noreferrer">Prof. Isaac Lage</a>
+                        </p>
+                    </div>
+                    <!-- Poster link inline in header -->
+                    <div class="poster-inline">
+                        <span style="font-size:1.3rem;">📊</span>
+                        <a href="Nguyen_M_28.pdf" target="_blank" rel="noopener noreferrer">View Research Poster →</a>
+                    </div>
                 </div>
 
                 <div class="research-content">
@@ -273,8 +371,8 @@
                             <div class="contribution-card">
                                 <div class="contribution-icon">🔧</div>
                                 <div class="contribution-content">
-                                    <h5>Systematic Strategy Analysis</h5>
-                                    <p>Designed and implemented <span class="highlight">6 masking strategies</span> (exact random, probabilistic, uncertainty-based, heuristic) with controlled experimental conditions, conducting comprehensive train-test alignment analysis across semi-realistic datasets to identify optimal deployment configurations</p>
+                                    <h5>Algorithm Design & Analysis</h5>
+                                    <p>Designed and implemented <span class="highlight">6 masking strategies</span> (exact random, probabilistic, uncertainty-based, heuristic) with controlled experimental conditions, conducting comprehensive train-test alignment analysis across semi-realistic datasets</p>
                                 </div>
                             </div>
                             <div class="contribution-card">
@@ -286,16 +384,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="research-poster">
-                        <div class="poster-placeholder">
-                            <span class="poster-icon">📊</span>
-                            <p>Summer Research Poster</p>
-                            <a href="Nguyen_M_28.pdf" class="poster-link" target="_blank" rel="noopener noreferrer">
-                                View Full Poster →
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -304,16 +392,20 @@
                 <h3>Past Research</h3>
                 <div class="past-research-card">
                     <h4>Bulk RNA-Seq Quantification</h4>
-                    <p class="research-affiliation">Projects in Mathematics & Applications, Ho Chi Minh City • June - Aug 2023</p>
-                    <p>
-                        Built optimization models using Bayesian networks and expectation-maximization algorithms to determine mRNA molecule proportions from transcriptome data. Achieved 81% success rate compared to industry-standard RSEM software through 30 experimental trials.
+                    <p class="research-affiliation">Projects in Mathematics &amp; Applications, Ho Chi Minh City &nbsp;•&nbsp; June – Aug 2023</p>
+                    <p style="margin: 1rem 0 0.6rem;">
+                        Built statistical models using three ML approaches — Bayesian networks, Expectation-Maximization algorithm, and Lagrange multiplier optimization — to determine mRNA molecule proportions from transcriptome data. Processed single-end and paired-end RNA-Seq databases using Python, and achieved an <strong>81% accuracy rate</strong> in mRNA proportion prediction compared to the industry-standard RSEM model after 30 experimental trials.
                     </p>
-                    <div class="research-tags">
+                    <div class="research-tags" style="margin-bottom: 1rem;">
                         <span class="tag">Bayesian Networks</span>
                         <span class="tag">EM Algorithm</span>
+                        <span class="tag">Lagrange Multipliers</span>
                         <span class="tag">Bioinformatics</span>
-                        <span class="tag">Optimization</span>
+                        <span class="tag">RNA-Seq</span>
+                        <span class="tag">Python</span>
                     </div>
+                    <!-- Report link — replace href with actual file path -->
+                    <a href="rna_seq_report.pdf" class="report-link" target="_blank" rel="noopener noreferrer">📄 View Research Report →</a>
                 </div>
             </div>
         </section>
