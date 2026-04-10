@@ -91,7 +91,54 @@
         <!-- Research Section -->
         <section id="research" class="research">
             <h2>Research</h2>
+
+            <!-- INCOMING REU -->
+            <div class="research-feature" style="margin-bottom: 2.5rem;">
+                <div class="research-header">
+                    <div class="research-badge" style="background: linear-gradient(135deg, var(--lime), var(--cyber-blue)); color: var(--text-dark);">Incoming • Summer 2025</div>
+                    <h3>Guiding Exploration in Benign Environments</h3>
+                    <p class="research-affiliation">CSE REU — Washington University in St. Louis &nbsp;•&nbsp; Faculty: <strong>Prof. Brendan Juba</strong></p>
+                </div>
+
+                <div class="research-content">
+                    <p class="research-abstract">
+                        <strong>Research Question:</strong> How can an agent efficiently learn a useful model of its environment by trial-and-error, even in settings where key features are inherently hard to discover — such as combination locks, where no efficient strategy guarantees finding the solution?
+                    </p>
+
+                    <p>
+                        This project investigates the computational aspects of environment exploration. Recent works have introduced information-theoretic quantities that capture when it is <em>possible in principle</em> to learn an adequate environment model in a small number of moves. The goal is to design algorithms that can solve nontrivial families of such exploration problems, bridging classical AI planning with modern learning theory.
+                    </p>
+
+                    <div class="contributions-section">
+                        <h4>Project Focus Areas</h4>
+                        <div class="contribution-grid">
+                            <div class="contribution-card">
+                                <div class="contribution-icon">🔍</div>
+                                <div class="contribution-content">
+                                    <h5>Exploration Hardness</h5>
+                                    <p>Studying <span class="highlight">information-theoretic measures</span> that characterize when environments are learnable in a bounded number of interactions — including adversarial cases like combination locks.</p>
+                                </div>
+                            </div>
+                            <div class="contribution-card">
+                                <div class="contribution-icon">🧭</div>
+                                <div class="contribution-content">
+                                    <h5>Algorithm Design</h5>
+                                    <p>Developing <span class="highlight">efficient algorithms for classical AI planning</span> that exploit benign environment structure to guide exploration and reliably discover key features with minimal trial-and-error.</p>
+                                </div>
+                            </div>
+                            <div class="contribution-card">
+                                <div class="contribution-icon">📐</div>
+                                <div class="contribution-content">
+                                    <h5>Theory & Probability</h5>
+                                    <p>Applying <span class="highlight">probabilistic reasoning and algorithm analysis</span> to formally characterize tractable families of exploration problems, drawing on ML theory and classical planning foundations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
+            <!-- CURRENT ML RESEARCH -->
             <div class="research-feature">
                 <div class="research-header">
                     <div class="research-badge">Current</div>
@@ -170,7 +217,28 @@
         <section id="projects" class="projects">
             <h2>Featured Projects</h2>
             <div class="project-grid">
-                <!-- Project 1 -->
+
+                <!-- Project 0 - Postcard I Never Send (NEWEST) -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">✉️</div>
+                        <h3 class="project-title">Postcard I Never Send</h3>
+                        <p class="project-tech">Full-Stack • Multimodal AI</p>
+                    </div>
+                    <div class="project-body">
+                        <p>A travel storybook web app that transforms your photos and trip details into narrative stories with AI-generated captions and voice narration. Powered by Google Gemini 2.5 Flash with real-world search grounding and a custom ElevenLabs TTS audio player built from scratch using the Web Audio API.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Google Gemini</span>
+                            <span class="tag">ElevenLabs</span>
+                            <span class="tag">Web Audio API</span>
+                        </div>
+                        <!-- <a href="#" class="project-link">View Project →</a> -->
+                    </div>
+                </div>
+
+                <!-- Project 1 - gastronome -->
                 <div class="project-card">
                     <div class="project-header">
                         <div class="project-icon">🍳</div>
@@ -251,6 +319,7 @@
                         <span class="skill-item">React</span>
                         <span class="skill-item">HTML/CSS</span>
                         <span class="skill-item">Responsive Design</span>
+                        <span class="skill-item">Web Audio API</span>
                         <span class="skill-item">UI/UX</span>
                     </div>
                 </div>
@@ -298,18 +367,22 @@
                     <h3>AI & Integration</h3>
                     <div class="skill-list">
                         <span class="skill-item">OpenAI GPT-4</span>
+                        <span class="skill-item">Google Gemini</span>
+                        <span class="skill-item">ElevenLabs TTS</span>
                         <span class="skill-item">Web Scraping</span>
-                        <span class="skill-item">Video Processing</span>
+                        <span class="skill-item">Prompt Engineering</span>
                         <span class="skill-item">Rate Limiting</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Specialized</h3>
+                    <h3>Theory & Algorithms</h3>
                     <div class="skill-list">
                         <span class="skill-item">Bayesian Networks</span>
                         <span class="skill-item">Algorithm Design</span>
+                        <span class="skill-item">AI Planning</span>
                         <span class="skill-item">Graph Theory</span>
                         <span class="skill-item">Optimization</span>
+                        <span class="skill-item">Probability Theory</span>
                     </div>
                 </div>
             </div>
@@ -357,7 +430,7 @@
             <h2>Let's Connect!</h2>
             <p>I'm always open to interesting conversations and opportunities.</p>
             <div class="contact-links">
-                <a href="mailto:chimainguyenthi0801@gmail.com" class="contact-btn email">Email Me</a>
+                <a href="/cdn-cgi/l/email-protection#b2d1dadbdfd3dbdcd5c7cbd7dcc6dadb828a8283f2d5dfd3dbde9cd1dddf" class="contact-btn email">Email Me</a>
                 <a href="https://github.com/chimai8106" class="contact-btn github">GitHub</a>
                 <a href="https://www.linkedin.com/in/mai-nguyen-674432218/" class="contact-btn linkedin">LinkedIn</a>
             </div>
