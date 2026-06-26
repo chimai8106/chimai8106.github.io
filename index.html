@@ -164,7 +164,7 @@
                 <!-- REU highlight badge -->
                 <div class="hero-reu-badge">
                     <span class="badge-dot"></span>
-                    Incoming REU Researcher · WashU CSE · Summer 2025
+                    REU Researcher · WashU CSE · Summer 2026
                 </div>
                 <h2>Where mathematics meets code</h2>
                 <p>CS & Math student at Colby College. Pulver Science Scholar. Building elegant algorithms, ML models, and full-stack applications at the intersection of theory and practice.</p>
@@ -182,14 +182,14 @@
                 I'm a Vietnamese student studying Computer Science and Mathematics at Colby College, where I'm a Pulver Science Scholar. I grew up in Nghe An Province and went to Phan Boi Chau High School for the Gifted before coming to the US for college.
             </p>
             <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-med); margin-bottom: 2rem;">
-                I love building things, whether it's full-stack applications, machine learning models, or legos. Currently, I'm researching ML and human feature integration, and I recently built gastronome, an AI-powered recipe app that extracts recipes from videos. I competed in math olympiads back in Vietnam and still get excited when I find an elegant proof or efficient algorithm.
+                I love building things — full-stack applications, machine learning models, or mathematical proofs. This summer I'm at Washington University in St. Louis doing research with Prof. Brendan Juba on algorithms for autonomous agents that learn environment rules from trial-and-error, with no teacher. On the side I'm building an RL agent to outperform Black-Scholes option hedging under transaction costs. I competed in math olympiads back in Vietnam and still get excited when I find an elegant proof or efficient algorithm.
             </p>
             <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-med); margin-bottom: 2rem;">
                 Outside of academic, I founded the Colby Baking Club and used to run an online bakery back in Vietnam. There's something satisfying about the precision required in both coding and baking: measure twice, debug once.
                 When I'm not at my computer or in the kitchen, you'll find me outdoors. I'm a Trip Leader for Colby Outing Club and Colby Outdoor Orientation, leading hiking trips. I also love swimming. Swimming and being on the water help me think through problems differently than staring at code ever could.
             </p>
             <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-med); margin-bottom: 2rem;">
-                I'm still figuring out how all these pieces fit together but I'm excited to see where the intersection of technology, creativity, and community takes me.
+                I'm still figuring out how all these pieces fit together but I'm excited to see where the intersection of theory, technology, and creativity takes me.
             </p>
             <div class="about-grid">
                 <div class="stat-card">
@@ -211,6 +211,27 @@
         <section id="projects" class="projects">
             <h2>Featured Projects</h2>
             <div class="project-grid">
+
+                <!-- RL Hedging — NEWEST -->
+                <div class="project-card" style="background: linear-gradient(160deg, #f0f7ff 0%, #fff 60%); border-color: var(--cyber-blue); box-shadow: 8px 8px 0 var(--cyber-blue);">
+                    <div class="project-header" style="background: linear-gradient(135deg, #dff0ff, #e8f4ff);">
+                        <div class="project-icon" style="background: linear-gradient(135deg, var(--cyber-blue), var(--lime));">📈</div>
+                        <h3 class="project-title">Can an RL Agent Beat Black-Scholes?</h3>
+                        <p class="project-tech">Quantitative Finance • Reinforcement Learning</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Training a PPO-based RL agent to outperform Black-Scholes delta hedging under realistic transaction costs. Framed as a CVaR minimisation MDP over a custom gymnasium environment with GBM price simulation, stress-tested under Heston stochastic volatility and Merton jump-diffusion dynamics.</p>
+                        <div class="project-tags">
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">PPO</span>
+                            <span class="tag">Black-Scholes</span>
+                            <span class="tag">gymnasium</span>
+                            <span class="tag">CVaR</span>
+                            <span class="tag">Stochastic Calculus</span>
+                        </div>
+                        <!-- <a href="#" class="project-link">View Project →</a> -->
+                    </div>
+                </div>
 
                 <!-- Postcard I Never Send — NEWEST -->
                 <div class="project-card postcard-card">
@@ -314,10 +335,10 @@
         <section id="research" class="research">
             <h2>Research</h2>
 
-            <!-- INCOMING REU — slim card -->
+            <!-- WASHU REU — active -->
             <div class="research-feature reu-slim" style="margin-bottom: 2.5rem;">
                 <div class="research-header">
-                    <div class="research-badge" style="background: linear-gradient(135deg, var(--lime), var(--cyber-blue)); color: var(--text-dark);">Incoming • Summer 2025</div>
+                    <div class="research-badge" style="background: linear-gradient(135deg, var(--lime), var(--cyber-blue)); color: var(--text-dark);">Current · Summer 2026</div>
                     <h3>Guiding Exploration in Benign Environments</h3>
                     <p class="research-affiliation">
                         CSE REU — Washington University in St. Louis &nbsp;•&nbsp;
@@ -326,8 +347,37 @@
                 </div>
                 <div class="research-content">
                     <p class="research-abstract">
-                        <strong>Research Question:</strong> How can an agent efficiently learn a useful model of its environment by trial-and-error, even in settings where key features are inherently hard to discover — such as combination locks, where no efficient strategy guarantees finding the solution? We aim to design algorithms that can solve nontrivial families of such exploration problems, bridging classical AI planning with modern learning theory.
+                        <strong>Research Question:</strong> In a benign planning environment — one solvable by a bounded-width planner — does there exist a polynomial-time exploration algorithm that collapses a SAM action-model version space without a teacher or NP oracle?
                     </p>
+                    <p>
+                        I am developing and analysing a polynomial-time algorithm for guiding autonomous agents to efficiently learn environment rules from trial-and-error alone. The core challenge is that even in structured environments, tracking how many candidate models remain consistent with observations is computationally hard once actions start failing.
+                    </p>
+                    <div class="contributions-section">
+                        <h4>Key Contributions</h4>
+                        <div class="contribution-grid">
+                            <div class="contribution-card">
+                                <div class="contribution-icon">🔧</div>
+                                <div class="contribution-content">
+                                    <h5>Proof-Level Bug Analysis</h5>
+                                    <p>Identified and fixed <span class="highlight">3 independent bugs</span> in the convergence analysis — redefining action-novelty at the (action, literal, rule-type) level, closing a reachability gap via a strengthened environment assumption, and restructuring the version space estimator to eliminate catastrophic cancellation.</p>
+                                </div>
+                            </div>
+                            <div class="contribution-card">
+                                <div class="contribution-icon">🔧</div>
+                                <div class="contribution-content">
+                                    <h5>Exact Combinatorial Counting</h5>
+                                    <p>Derived an <span class="highlight">exact closed-form counting algorithm</span> via Möbius inversion over failure signatures, exploiting per-action slot independence to factor the version space into a product of per-action subproblems — eliminating approximation error and catastrophic cancellation entirely.</p>
+                                </div>
+                            </div>
+                            <div class="contribution-card">
+                                <div class="contribution-icon">🔧</div>
+                                <div class="contribution-content">
+                                    <h5>Hardness Analysis</h5>
+                                    <p>Analysed <span class="highlight">MCMC and DNF-based approximate counting</span> for the version space, identifying the hardness boundary via reduction from counting independent sets (Roth inapproximability), and characterised when ApproxMC is required as a fallback.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -449,9 +499,13 @@
                     <h3>ML & Data Science</h3>
                     <div class="skill-list">
                         <span class="skill-item">scikit-learn</span>
+                        <span class="skill-item">PyTorch</span>
+                        <span class="skill-item">stable-baselines3</span>
+                        <span class="skill-item">gymnasium</span>
                         <span class="skill-item">NumPy</span>
                         <span class="skill-item">pandas</span>
                         <span class="skill-item">Matplotlib</span>
+                        <span class="skill-item">scipy</span>
                         <span class="skill-item">Atomic Agents</span>
                     </div>
                 </div>
@@ -492,9 +546,12 @@
                         <span class="skill-item">Bayesian Networks</span>
                         <span class="skill-item">Algorithm Design</span>
                         <span class="skill-item">AI Planning</span>
+                        <span class="skill-item">Reinforcement Learning</span>
+                        <span class="skill-item">Stochastic Calculus</span>
                         <span class="skill-item">Graph Theory</span>
                         <span class="skill-item">Optimization</span>
                         <span class="skill-item">Probability Theory</span>
+                        <span class="skill-item">LaTeX</span>
                     </div>
                 </div>
             </div>
